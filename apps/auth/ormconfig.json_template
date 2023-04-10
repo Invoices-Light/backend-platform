@@ -1,0 +1,25 @@
+{
+   "type": "postgres",
+   "host": "127.0.0.1",
+   "port": 5432,
+   "username": "invoices_light",
+   "password": "invoices_light",
+   "database": "invoices_light",
+   "schema": "auth_service",
+   "synchronize": false,
+   "logging": false,
+   "entities": [
+      "dist/apps/auth/src/app/database/entities/**/*.js"
+   ],
+   "migrations": [
+      "dist/apps/auth/src/migrations/**/*.js"
+   ],
+   "subscribers": [
+      "dist/apps/auth/src/subscriber/**/*.js"
+   ],
+   "cli": {
+      "entitiesDir": "apps/auth/src/app/database/entities",
+      "migrationsDir": "apps/auth/src/migrations",
+      "subscribersDir": "apps/auth/src/subscriber"
+   }
+}
